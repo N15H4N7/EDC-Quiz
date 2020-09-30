@@ -71,38 +71,15 @@
             </div>
             <div class="top_menu">
                 <h3>Hi Tanya!</h3>
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <h3 id="demo"></h3>
-                    </li>
-                </ul>
-                <script>
-                    var deadline = new Date("Sept 28, 2020 15:37:25").getTime();
-                    var x = setInterval(function () {
-                        var now = new Date().getTime();
-                        var t = deadline - now;
-                        var days = Math.floor(t / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((t % (1000 * 60)) / 1000);
-                        if (hours < "10") { hours = "0" + hours; }
-                        if (minutes < "10") { minutes = "0" + minutes; }
-                        if (seconds < "10") { seconds = "0" + seconds; }
-                        document.getElementById("demo").innerHTML = hours + ":" + minutes + ":" + seconds;
-                        if (t < 0) {
-                            clearInterval(x);
-                            document.getElementById("demo").innerHTML = "EXPIRED";
-                        }
-                    }, 1000); 
-                </script>
+                
             </div>
         </div>
 
         <div class="sidebar" style="overflow-y: auto; padding-bottom: 5rem">
             <ul>
-                <li><a href="#q1">
+                <div id="quesnav"><li><a href="#q1">
                         <span class="icon"><i class="fas fa-lightbulb"></i></span>
-                        <span class="title">Question 1</span></a></li>
+                        <span class="title">Question 1</span></a></li></div>
                 <li><a href="#q2">
                         <span class="icon"><i class="fas fa-lightbulb"></i></span>
                         <span class="title">Question 2</span>
@@ -163,7 +140,7 @@
         </div>
         <style>
             .light{
-                color: #4360b5 !important;
+                color:  rgb(122, 171, 168) !important;
             }
         </style>
         <div class="main_container">
@@ -627,7 +604,7 @@
                         <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
                         <label class="ques-label">D) None of the above</label>
                     </div>
-                    <div class="pt-2" style="display: inline-block;">
+                    <div style="display: inline-block;">
                         <a href="#q14" class="btn btn-primary">Previous</a>
                         <a href="ThankYou.html" class="btn btn-primary">Submit</a>
                     </div>
